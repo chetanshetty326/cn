@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<string.h>
+
+void main()
+
+{
+   int i,key,len,choice;
+   char plain[100],cipher[100];
+     printf("\nenter the pt\n");
+     scanf("%s",plain); 
+   printf("\nenter the key\n");
+   scanf("%d",&key); 
+ 
+ len=strlen(plain);
+ 
+      for(i=0;i<len;i++)
+      {
+        cipher[i]=plain[i]+key;
+        if (plain[i]<'Z')
+        cipher[i]=cipher[i]-26;
+        
+      }
+      
+printf("\nencryption text is: %s\n",cipher);
+
+ 
+ 
+      for(i=0;i<len;i++)
+      {
+        cipher[i]=plain[i]-key;
+        if (plain[i]>'Z')
+        cipher[i]=cipher[i]+26;
+        
+      }
+      
+printf("\ndecryption text is: %s\n",plain);
+
+
+}
+   
+
+      
+      
+      
